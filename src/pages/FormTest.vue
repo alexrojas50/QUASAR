@@ -79,6 +79,10 @@
             nombres.value = null;
             accept.value = false;
         };
+
+        function redirect() {
+            window.location.href = "https://www.youtube.com/watch?v=mCdA4bJAGGk&ab_channel=sweetblue.";
+        }
         watch(apodos, () => {
             (!apodos.value || !nombres.value) ? no.value = false : no.value = true;
         });
@@ -119,7 +123,8 @@
             apodos,
             opciones,
             formu,
-            reset
+            reset,
+            redirect
         };
     },
     components: { TableVue }
@@ -162,6 +167,7 @@
           <div class="col-12">
 
             <q-btn label="Submit" icon="check_box" color="primary" :push="true" type="submit"/>
+            <q-btn class="q-ml-md" label="No presiones este botón" icon="warning" color="red" :push="true" v-on:click = "redirect"/>
             <q-btn class="q-ml-md" icon="cached" label="Reset" color="red" :push="true" type="reset"/>
             
           </div>
