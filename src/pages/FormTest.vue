@@ -3,7 +3,8 @@
   import { useQuasar, QSpinnerGears } from 'quasar'
   import { onMounted, ref, watch } from 'vue'
   import TableVue from '../components/TableVue.vue'
-  
+  import { VueRecaptcha } from 'vue-recaptcha';
+
   export default {
     setup() {
 
@@ -124,10 +125,11 @@
             opciones,
             formu,
             reset,
-            redirect
+            redirect,
+            
         };
     },
-    components: { TableVue }
+    components: { TableVue, VueRecaptcha }
 }
   
   
@@ -164,16 +166,20 @@
           </div>
           <q-toggle v-model="accept" label="I accept the license and terms" />
 
-          <div class="col-12">
+          <div class="col-12 q-gutter-md q-pb-sm">
 
             <q-btn label="Submit" icon="check_box" color="primary" :push="true" type="submit"/>
-            <q-btn class="q-ml-md" label="No presiones este botón" icon="warning" color="red" :push="true" v-on:click = "redirect"/>
-            <q-btn class="q-ml-md" icon="cached" label="Reset" color="red" :push="true" type="reset"/>
+            <q-btn class="q-pl-sm" label="No presiones este botón" icon="warning" color="red" :push="true" v-on:click = "redirect"/>
+            <q-btn class="q-pl-sm" icon="cached" label="Reset" color="red" :push="true" type="reset"/>
             
           </div>
           
 
         </q-form>
+        
+        <div class="row justify-left q-mt-sm">
+            <vue-recaptcha sitekey="6LeHtrgZAAAAADE5NTbYevEhNaeLfvO43ub72T1E"></vue-recaptcha>
+        </div>
 
         <TableVue :personas="personas"/>
 
