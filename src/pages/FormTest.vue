@@ -178,7 +178,7 @@
         </q-form>
         
         <div class="row justify-left q-mt-sm">
-            <vue-recaptcha sitekey="6LeHtrgZAAAAADE5NTbYevEhNaeLfvO43ub72T1E"></vue-recaptcha>
+            <vue-recaptcha sitekey="6LdLg44hAAAAAOszDmjuEsyEeHPu71qvDZPhdpSl"></vue-recaptcha>
         </div>
 
         <TableVue :personas="personas"/>
