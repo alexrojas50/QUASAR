@@ -301,9 +301,9 @@ notificar3()
 
   numbers.value.forEach(e => {
     if(
-       e.charAt(0) == numberInput.value.charAt(0) ||
-       e.charAt(1) == numberInput.value.charAt(1) ||
-       e.charAt(2) == numberInput.value.charAt(2)
+       (e.charAt(0) == numberInput.value.charAt(0) && e.charAt(1) !== numberInput.value.charAt(1) && e.charAt(1) !== numberInput.value.charAt(2) && e.charAt(2) !== numberInput.value.charAt(1) && e.charAt(2) !== numberInput.value.charAt(2)) ||
+       (e.charAt(1) == numberInput.value.charAt(1) && e.charAt(0) !== numberInput.value.charAt(0) && e.charAt(0) !== numberInput.value.charAt(2) && e.charAt(2) !== numberInput.value.charAt(0) && e.charAt(2) !== numberInput.value.charAt(2)) ||
+       (e.charAt(2) == numberInput.value.charAt(2) && e.charAt(1) !== numberInput.value.charAt(1) && e.charAt(1) !== numberInput.value.charAt(0) && e.charAt(0) !== numberInput.value.charAt(1) && e.charAt(0) !== numberInput.value.charAt(0)) 
     ) numberGet.push(e)
   })
 
