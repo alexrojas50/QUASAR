@@ -118,7 +118,7 @@ notificar3()
       alert("El número es: " + numbers.value[0])
       return true
     }
- if(!numbers.value) {
+if(numbers.value.length == 0) {      
       alert("Algo ha salido mal. Colocaste un número mal, o el sistema ha fallado, por favor contactar a soporte (El negro Alejandro)")
       return true
     }
@@ -154,7 +154,7 @@ notificar3()
     alert("El número es: " + numbers.value[0])
     return true
   }
- if(!numbers.value) {
+if(numbers.value.length == 0) {      
       alert("Algo ha salido mal. Colocaste un número mal, o el sistema ha fallado, por favor contactar a soporte (El negro Alejandro)")
       return true
     }
@@ -192,7 +192,7 @@ notificar3()
       alert("El número es: " + numbers.value[0])
       return true
     }
- if(!numbers.value) {
+if(numbers.value.length == 0) {      
       alert("Algo ha salido mal. Colocaste un número mal, o el sistema ha fallado, por favor contactar a soporte (El negro Alejandro)")
       return true
     }
@@ -232,7 +232,7 @@ notificar3()
       alert("El número es: " + numbers.value[0])
       return true
     }
- if(!numbers.value) {
+if(numbers.value.length == 0) {      
       alert("Algo ha salido mal. Colocaste un número mal, o el sistema ha fallado, por favor contactar a soporte (El negro Alejandro)")
       return true
     }
@@ -272,7 +272,7 @@ notificar3()
       alert("El número es: " + numbers.value[0])
       return true
     }
- if(!numbers.value) {
+if(numbers.value.length == 0) {      
       alert("Algo ha salido mal. Colocaste un número mal, o el sistema ha fallado, por favor contactar a soporte (El negro Alejandro)")
       return true
     }
@@ -313,7 +313,7 @@ notificar3()
       alert("El número es: " + numbers.value[0])
       return true
     }
- if(!numbers.value) {
+if(numbers.value.length == 0) {      
       alert("Algo ha salido mal. Colocaste un número mal, o el sistema ha fallado, por favor contactar a soporte (El negro Alejandro)")
       return true
     }
@@ -354,8 +354,8 @@ notificar3()
       alert("El número es: " + numbers.value[0])
       return true
     }
-  if(!numbers.value) {
-      alert("Algo ha salido mal. Colocaste un número mal, o el sistema ha fallado, por favor contactar a soporte (El negro Alejandro)")
+if(numbers.value.length == 0) {      
+    alert("Algo ha salido mal. Colocaste un número mal, o el sistema ha fallado, por favor contactar a soporte (El negro Alejandro)")
       return true
     }
   notificar()
@@ -390,7 +390,7 @@ notificar3()
       alert("El número es: " + numbers.value[0])
       return true
     }
- if(!numbers.value) {
+ if(numbers.value.length == 0) {
       alert("Algo ha salido mal. Colocaste un número mal, o el sistema ha fallado, por favor contactar a soporte (El negro Alejandro)")
       return true
     }
