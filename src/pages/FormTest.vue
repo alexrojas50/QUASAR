@@ -3,19 +3,17 @@
   import { useQuasar, QSpinnerGears } from 'quasar'
   import { onMounted, ref, watch } from 'vue'
   import TableVue from '../components/TableVue.vue'
-  import { VueRecaptcha } from 'vue-recaptcha';
 
   export default {
     setup() {
-
+        const captchaToken = ref("")
         const personas = ref([])
-
         const $q = useQuasar();
         const no = ref(false);
         const accept = ref(false);
         const apodos = ref(null);
         const nombres = ref(null);
-        const opciones = ref(["Andrea", "Katherene", "Jeremy"]);
+        const opciones = ref(["Andrea", "Katherene", "Jeremy","Said","Daniel","Carbrielys"]);
         const formu = () => {
             console.log("lol--------------", $q);
             console.log("NOMBRES ----------", nombres.value);
@@ -36,6 +34,14 @@
                     textColor: "white",
                     icon: "warning",
                     message: "Acepta los terminos"
+                });
+            }
+            else if (!captchaToken.value) {
+                $q.notify({
+                    color: "red-5",
+                    textColor: "white",
+                    icon: "warning",
+                    message: "Completa el captcha, putito"
                 });
             }
             else {
@@ -95,6 +101,9 @@
             montar()
         })
 
+       
+  
+
         function montar() {
             fetch('https://quasarajrm.herokuapp.com/graphql', {
                     method: 'POST',
@@ -115,6 +124,8 @@
                     console.log(personas.value)
                 })
 
+                
+
             
         }
         return {
@@ -127,9 +138,10 @@
             reset,
             redirect,
             
+            
         };
     },
-    components: { TableVue, VueRecaptcha }
+    components: { TableVue }
 }
   
   
@@ -171,15 +183,13 @@
             <q-btn label="Submit" icon="check_box" color="primary" :push="true" type="submit"/>
             <q-btn class="q-pl-sm" label="No presiones este botón" icon="warning" color="red" :push="true" v-on:click = "redirect"/>
             <q-btn class="q-pl-sm" icon="cached" label="Reset" color="red" :push="true" type="reset"/>
-            
+
           </div>
           
 
         </q-form>
         
-        <div class="row justify-left q-mt-sm">
-            <vue-recaptcha sitekey="6LdLg44hAAAAAOszDmjuEsyEeHPu71qvDZPhdpSl"></vue-recaptcha>
-        </div>
+        
 
         <TableVue :personas="personas"/>
 

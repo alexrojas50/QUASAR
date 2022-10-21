@@ -56,6 +56,16 @@
               </q-item-section>
             </q-item>
 
+            <q-item clickable v-ripple to="/game" active-class="my-menu-link" exact>
+              <q-item-section avatar>
+                <q-icon name="star" />
+              </q-item-section>
+
+              <q-item-section>
+                NumberGame
+              </q-item-section>
+            </q-item>
+
           </q-list>
         </q-scroll-area>
 
