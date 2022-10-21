@@ -420,7 +420,7 @@ notificar3()
 <template>
  <q-page class="q-pl-sm">
 
-  <h1 v-if="numbers.length < 50">HOLIS</h1>
+  <h5 v-if="numbers.length < 50">Pueden ser los siguientes números: {{numbers}} </h5>
 
   <div class="col-12 col-sm-6">
 
